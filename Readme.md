@@ -17,7 +17,7 @@ Results in creating of the file:
 ```
 
 ```
-curl 'http://localhost:8000/hello'  -H 'Content-Type: multipart/form-data; boundary=12345' -H "Keep-Alive: 60" -H 'Connection: keep-alive' data-binary $'12345\r\nContent-Disposition: form-data; name="file_upload"; filename="../test/testfile.txt"\r\nContent-Type: text/plain\r\n\r\nTESTTEST\r\n12345\r\n'
+curl 'http://localhost:8000/hello'  -H 'Content-Type: multipart/form-data; boundary=----12345' -H "Keep-Alive: 60" -H 'Connection: keep-alive' --data-binary $'------12345\r\nContent-Disposition: form-data; name="file_upload"; filename="../test/testfile.txt"\r\nContent-Type: text/plain\r\n\r\nTESTTEST\r\n------12345--\r\n'
 ```
 Results in:
 ```
