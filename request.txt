@@ -1,0 +1,11 @@
+POST /hello
+Host: example.com
+Content-Length: 2740
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryAAAAA
+
+------WebKitFormBoundaryAAAAA
+Content-Disposition: form-data; name="fileName"; filename="../test/test.txt"
+Content-Type: text/plain
+
+[file content goes there]
+------WebKitFormBoundaryAAAAA
